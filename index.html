@@ -6,16 +6,14 @@
     <link href="/dist/output.css" rel="stylesheet" />
     <title>Giarddesign</title>
   </head>
-  <body class="bg-white flex-col inline-flex">
-    <header class="m-auto">
-      <div
-        class="w-[1262px] h-[72px] py-6 bg-white justify-between items-center gap-[485px] inline-flex"
-      >
-        <svg width="114" height="19">
+  <body class="bg-white flex-col flex">
+    <header class="w-[1262px] mx-auto">
+      <div class="py-6 bg-white self-stretch justify-between items-center flex">
+        <svg class="w-[114px] h-[19px]">
           <use href="./src/images/icons.svg#icon-giarddesign"></use>
         </svg>
 
-        <nav>
+        <nav class="ml-auto">
           <ul
             class="w-[442px] h-6 justify-start items-center gap-12 inline-flex"
           >
@@ -38,7 +36,7 @@
             <li>
               <a
                 class="text-center text-neutral-900 text-sm font-normal leading-[21px]"
-                href="#"
+                href="#oFirmie"
                 >O firmie</a
               >
             </li>
@@ -46,7 +44,7 @@
             <li>
               <a
                 class="text-center text-neutral-900 text-sm font-normal leading-[21px]"
-                href="#"
+                href="#realizacje"
                 >Realizacje</a
               >
             </li>
@@ -54,7 +52,7 @@
             <li>
               <a
                 class="text-center text-neutral-900 text-sm font-normal leading-[21px]"
-                href="#"
+                href="#kontakt"
                 >Kontakt</a
               >
             </li>
@@ -73,225 +71,454 @@
       </div>
     </header>
 
+    <main>
+      <!-- HERO -->
 
+      <section class="bg-orange-200 justify-center items-center gap-16 flex">
+        <div
+          class="w-[599px] flex-col justify-start items-start gap-[72px] inline-flex"
+        >
+          <div
+            class="self-stretch h-[326px] flex-col justify-start items-start gap-11 flex"
+          >
+            <h1
+              class="w-[599px] text-neutral-900 text-6xl font-medium leading-[70px]"
+            >
+              Nowoczesna aranżacja<br />Twojego ogrodu
+            </h1>
+            <p
+              class="w-[489.01px] text-neutral-900 text-base font-normal leading-normal"
+            >
+              Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
+              realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
+              podejściem do każdego projektu.
+            </p>
+          </div>
+          <div class="justify-start items-start gap-9 inline-flex">
+            <button
+              class="px-6 pt-3 pb-3.5 bg-green-900 rounded-[200px] justify-start items-center gap-2.5 flex"
+            >
+              <span
+                class="text-center text-stone-100 text-base font-normal leading-normal"
+              >
+                Skontaktuj się z nami
+              </span>
+            </button>
+            <button
+              class="px-[22px] pt-3 pb-3.5 rounded-[200px] border border-green-900 justify-start items-center gap-2 flex"
+            >
+              <span
+                class="text-center text-green-900 text-base font-normal leading-normal"
+                >Zobacz nasze realizacje</span
+              >
+              <svg class="w-4 h-4 fill-green-900">
+                <use href="./src/images/icons.svg#icon-arrow-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div
+          class="w-[688px] h-[737px] relative bg-white bg-opacity-10 justify-end items-center inline-flex"
+        >
+          <img
+            class="w-[688px] h-[737px]"
+            src="./src/images/Photohero.jpg"
+            alt="hero background"
+            width="688"
+            height="737"
+          />
+          <div
+            class="absolute self-stretch px-12 py-9 bg-stone-100 bottom-0 justify-start items-start gap-11 inline-flex"
+          >
+            <svg
+              class="w-[26px] h-[26px] flex-col justify-center items-center gap-2.5 inline-flex"
+            >
+              <use href="./src/images/icons.svg#icon-arrow-left"></use>
+            </svg>
+            <svg
+              class="w-[26px] h-[26px] flex-col justify-center items-center gap-2.5 inline-flex"
+            >
+              <use href="./src/images/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </div>
+        </div>
+      </section>
 
-    <!-- HERO -->
+      <!-- OFFER -->
 
-    <section
-      class="w-[1440px] h-[737px] bg-orange-200 justify-end items-center gap-16 inline-flex"
-    >
-      <div
-        class="w-[599px] flex-col justify-start items-start gap-[72px] inline-flex"
+      <section
+        class="pt-[120px] pb-40 bg-stone-100 flex-col justify-center items-center gap-24 flex"
       >
         <div
-          class="self-stretch h-[326px] flex-col justify-start items-start gap-11 flex"
+          class="w-[1040px] h-[193px] flex-col justify-start items-start gap-4 inline-flex"
         >
-          <h1
-            class="w-[599px] text-neutral-900 text-6xl font-medium leading-[70px]"
-          >
-            Nowoczesna aranżacja<br />Twojego ogrodu
-          </h1>
           <p
-            class="w-[489.01px] text-neutral-900 text-base font-normal leading-normal"
+            id="oferta"
+            class="text-green-900 text-xs font-normal leading-[18px]"
           >
-            Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka
-            realizacji. Oferujemy kompleksowy zakres usług z indywidualnym
-            podejściem do każdego projektu.
+            Oferta
           </p>
+          <div
+            class="w-[709px] h-[159px] flex-col justify-start items-start gap-8 inline-flex"
+          >
+            <h2 class="self-stretch">
+              <span
+                class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
+                >Działamy
+              </span>
+              <span
+                class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
+                >kompleksowo</span
+              >
+            </h2>
+            <p class="text-neutral-900 text-base font-normal leading-normal">
+              Oferujemy kompletną obsługę inwestycji terenów zielonych.
+              Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
+              Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
+              życie, a na każdym etapie posłużymy radą i wieloletnim
+              doświadczeniem.
+            </p>
+          </div>
         </div>
-        <div class="justify-start items-start gap-9 inline-flex">
+
+        <div
+          class="w-[1440px] h-[370px] px-[88px] bg-stone-100 justify-center items-start gap-16 inline-flex"
+        >
+          <div
+            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+          >
+            <div
+              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+            >
+              <img
+                class="w-10 h-10 p-0.5 justify-center items-center inline-flex"
+                src="./src/images/offer/pen.png"
+                alt="pen"
+              />
+              <div
+                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+              >
+                <h3
+                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                >
+                  Projekty
+                </h3>
+                <p
+                  class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]"
+                >
+                  Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
+                  wykorzystaniem istniejącej przestrzeni.
+                </p>
+              </div>
+            </div>
+            <button
+              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+            >
+              <span
+                class="text-center text-green-900 text-base font-normal leading-normal"
+                >Dowiedz się więcej</span
+              ><svg class="w-4 h-4 fill-green-900">
+                <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+          >
+            <div
+              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+            >
+              <img
+                class="w-12 h-11 pt-2 pb-[7.04px] justify-center items-center inline-flex"
+                src="./src/images/offer/eye.png"
+                alt="eye"
+              />
+              <div
+                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+              >
+                <h3
+                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                >
+                  Wizualizacje
+                </h3>
+                <p
+                  class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]"
+                >
+                  Przedstawimy Ci projekty koncepcyjne  w postaci wirtualnego
+                  spaceru animowanego w technologii 3D.
+                </p>
+              </div>
+            </div>
+            <button
+              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+            >
+              <span
+                class="text-center text-green-900 text-base font-normal leading-normal"
+                >Dowiedz się więcej</span
+              ><svg class="w-4 h-4 fill-green-900">
+                <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
+              </svg>
+            </button>
+          </div>
+
+          <div
+            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+          >
+            <div
+              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+            >
+              <img
+                class="w-11 h-11 justify-center items-center inline-flex"
+                src="./src/images/offer/stars.png"
+                alt="stars"
+              />
+              <div
+                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+              >
+                <h3
+                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                >
+                  Realizacje
+                </h3>
+                <p
+                  class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]"
+                >
+                  Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań
+                  i zaawansowanych technologii.
+                </p>
+              </div>
+            </div>
+            <button
+              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+            >
+              <span
+                class="text-center text-green-900 text-base font-normal leading-normal"
+                >Zobacz nasze realizacje</span
+              ><svg class="w-4 h-4 fill-green-900">
+                <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+
+      <section
+        id="oFirmie"
+        class="bg-green-900 justify-center items-center gap-16 flex"
+      >
+        <img
+          class="w-[688px] h-[720px] relative"
+          src="./src/images/Photoabout.jpg"
+          alt="about company section photo"
+        />
+        <div
+          class="w-[596px] h-[450px] pl-24 flex-col justify-start items-start gap-[72px] inline-flex"
+        >
+          <div
+            class="w-[500px] h-[328px] flex-col justify-start items-start gap-4 inline-flex"
+          >
+            <p class="text-stone-100 text-xs font-normal leading-[18px]">
+              O firmie
+            </p>
+            <div
+              class="w-[500px] h-[294px] flex-col justify-start items-start gap-10 inline-flex"
+            >
+              <h2>
+                <span
+                  class="text-stone-100 text-5xl font-medium leading-[55.20px]"
+                  >Tworzymy z </span
+                ><span
+                  class="text-stone-100 text-5xl font-medium leading-[55.20px]"
+                  >pasją</span
+                >
+              </h2>
+              <p class="text-stone-100 text-base font-normal leading-normal">
+                Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą
+                wykwalifikowani projektanci oraz architekci, których zadaniem
+                jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza
+                specjalizacja to przestrzenie nowoczesne, które charakteryzuje
+                minimalizm, geometria i elegancka prostota. Tworzymy ogrody
+                małoobsługowe, dostosowane do współczesnego trybu życia.
+              </p>
+            </div>
+          </div>
           <button
-            class="px-6 pt-3 pb-3.5 bg-green-900 rounded-[200px] justify-start items-center gap-2.5 flex"
+            class="h-[50px] px-[22px] pt-3 pb-3.5 rounded-[200px] border border-stone-100 justify-start items-center gap-2 inline-flex"
           >
             <span
               class="text-center text-stone-100 text-base font-normal leading-normal"
+              >Poznaj nas bliżej</span
             >
-              Skontaktuj się z nami
-            </span>
+            <svg class="w-4 h-4 fill-stone-100">
+              <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
+            </svg>
           </button>
+        </div>
+      </section>
+
+      <!-- PROJECTS -->
+
+      <section
+        id="realizacje"
+        class="pt-[120px] pb-11 bg-orange-200 flex-col justify-center items-start gap-24 flex"
+      >
+        <div
+          class="w-[1120px] h-[89px] mx-auto flex-col items-start gap-4 flex"
+        >
+          <p class="text-green-900 text-xs font-normal leading-[18px]">
+            Realizacje
+          </p>
+          <h2>
+            <span
+              class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
+              >Nasze </span
+            ><span
+              class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
+              >projekty</span
+            >
+          </h2>
+        </div>
+        <div class="w-full h-[1475px] relative">
+          <!-- PLACE FOR PHOTO GALLERY -->
+
+          <div
+            class="w-full h-[1000px] left-0 top-[475px] absolute bg-gradient-to-t from-red-300 to-orange-200"
+          ></div>
+
           <button
-            class="px-[22px] pt-3 pb-3.5 rounded-[200px] border border-green-900 justify-start items-center gap-2 flex"
+            class="w-fit h-[50px] px-[22px] pt-3 pb-3.5 mx-auto inset-x-0 bottom-11 absolute rounded-[200px] border border-neutral-900 justify-center items-center gap-2 flex"
           >
             <span
-              class="text-center text-green-900 text-base font-normal leading-normal"
-              >Zobacz nasze realizacje</span
+              class="text-center text-neutral-900 text-base font-normal leading-normal"
+              >Rozwiń</span
             >
-            <svg width="16" height="16">
+            <svg class="w-4 h-4 fill-neutral-900">
               <use href="./src/images/icons.svg#icon-arrow-down"></use>
             </svg>
           </button>
         </div>
-      </div>
-      <div
-        class="w-[688px] h-[737px] relative bg-white bg-opacity-10 justify-end items-center inline-flex"
+      </section>
+
+      <!-- INSTAGRAM -->
+
+      <section
+        class="py-[60px] bg-stone-100 flex-col justify-center items-center gap-2.5 flex"
       >
-        <img
-          class="w-[688px] h-[737px]"
-          src="./src/images/Photohero.jpg"
-          alt="hero background"
-          width="688"
-          height="737"
-        />
         <div
-          class="absolute self-stretch px-12 py-9 bg-stone-100 bottom-0 justify-start items-start gap-11 inline-flex"
+          class="w-[1040px] px-[110px] py-[120px] bg-green-900 justify-start items-end gap-16 inline-flex"
         >
-          <svg
-            class="w-[26px] h-[26px] flex-col justify-center items-center gap-2.5 inline-flex"
-          >
-            <use href="./src/images/icons.svg#icon-arrow-left"></use>
-          </svg>
-          <svg
-            class="w-[26px] h-[26px] flex-col justify-center items-center gap-2.5 inline-flex"
-          >
-            <use href="./src/images/icons.svg#icon-arrow-right"></use>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- OFFER -->
-
-    <section
-      class="w-[1440px] h-[939px] pt-[120px] pb-40 bg-stone-100 flex-col justify-start items-center gap-24 inline-flex"
-    >
-      <div class="w-[1040px] h-[193px] flex-col justify-start items-start gap-4 inline-flex">
-        <p
-          id="oferta"
-          class="text-green-900 text-xs font-normal leading-[18px]"
-        >
-          Oferta
-        </p>
-        <div
-          class="w-[709px] h-[159px] flex-col justify-start items-start gap-8 inline-flex"
-        >
-          <h2 class="self-stretch">
-            <span
-              class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
-              >Działamy
-            </span>
-            <span
-              class="text-neutral-900 text-5xl font-medium leading-[55.20px]"
-              >kompleksowo</span
+          <h2 class="w-[599px]">
+            <span class="text-stone-100 text-[40px] font-normal leading-[48px]"
+              >Zostańmy w kontakcie! Znajdziesz nas na </span
+            ><span
+              class="text-stone-100 text-[40px] font-medium leading-[48px] tracking-wide"
+              >Instagramie</span
+            ><span class="text-stone-100 text-[40px] font-normal leading-[48px]"
+              >.</span
             >
           </h2>
-          <p class="text-neutral-900 text-base font-normal leading-normal">
-            Oferujemy kompletną obsługę inwestycji terenów zielonych.
-            Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
-            Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie,
-            a na każdym etapie posłużymy radą i wieloletnim doświadczeniem.
-          </p>
-        </div>
-      </div>
-
-
-      <div
-        class="w-[1440px] h-[370px] px-[88px] bg-stone-100 justify-center items-start gap-16 inline-flex"
-      >
-        <div
-          class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
-        >
           <div
-            class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+            class="w-[157px] flex-col justify-start items-start gap-6 inline-flex"
           >
-            <img
-              class="w-10 h-10 p-0.5 justify-center items-center inline-flex"
-              src="./src/images/offer/pen.png"
-              alt="pen"
-            />
-            <div
-              class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+            <p
+              class="self-stretch text-stone-100 text-base font-normal leading-normal"
             >
-              <h3
-                class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+              Śledź nasze najnowsze realizacje!
+            </p>
+            <button
+              class="px-6 pt-2.5 pb-3 bg-stone-100 rounded-[200px] justify-start items-center gap-2.5 inline-flex"
+            >
+              <span
+                class="text-center text-green-900 text-base font-normal leading-normal"
+                >Instagram</span
               >
-                Projekty
-              </h3>
-              <p
-                class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]"
-              >
-                Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym
-                wykorzystaniem istniejącej przestrzeni.
-              </p>
-            </div>
+            </button>
           </div>
-          <button
-            class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
-          >
-            <span
-              class="text-center text-green-900 text-base font-normal leading-normal"
-              >Dowiedz się więcej</span
-            ><svg class="w-4 h-4">
-              <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
-            </svg>
-          </button>
         </div>
-
-        <div
-          class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex">
-          <div class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex">
-            <img class="w-12 h-11 pt-2 pb-[7.04px] justify-center items-center inline-flex" src="./src/images/offer/eye.png" alt="eye" />
-            <div class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex">
-              <h3 class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose">
-                Wizualizacje
-              </h3>
-              <p class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]">
-                Przedstawimy Ci projekty koncepcyjne  w postaci wirtualnego spaceru animowanego w technologii 3D.
-              </p>
-            </div>
-          </div>
-          <button class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex">
-            <span class="text-center text-green-900 text-base font-normal leading-normal">Dowiedz się więcej</span><svg
-              class="w-4 h-4">
-              <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
-            </svg>
-          </button>
-        </div>
-
-        <div
-          class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex">
-          <div class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex">
-            <img class="w-11 h-11 justify-center items-center inline-flex" src="./src/images/offer/stars.png" alt="stars" />
-            <div class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex">
-              <h3 class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose">
-                Realizacje
-              </h3>
-              <p class="w-[298px] text-neutral-900 text-sm font-normal leading-[21px]">
-                Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.
-              </p>
-            </div>
-          </div>
-          <button class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex">
-            <span class="text-center text-green-900 text-base font-normal leading-normal">Zobacz nasze realizacje</span><svg
-              class="w-4 h-4">
-              <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-
-    
-    <!-- ABOUT -->
-
-    <section></section>
-
-    <!-- PROJECTS -->
-
-    <section></section>
-
-    <!-- INSTAGRAM -->
-
-    <section></section>
-
-    <!-- CONTACT -->
-
-    <section></section>
-
+      </section>
+    </main>
     <!-- FOOTER -->
 
-    <footer></footer>
+    <footer class=" bg-neutral-900 ">
+      <div
+        class="w-[1440px] h-[499px] mx-auto px-48 py-20 flex-col justify-start items-center gap-[120px] flex"
+      >
+        <div
+          class="h-[195px] self-stretch flex-col justify-start items-start gap-[62px] flex"
+        >
+          <div class="self-stretch justify-between items-center inline-flex">
+            <svg class="w-[114px] h-[19px] fill-stone-100 mr-auto">
+              <use href="./src/images/icons.svg#icon-giarddesign"></use>
+            </svg>
+            <div class="justify-start items-center gap-6 flex">
+              <span class="text-stone-100 text-base font-normal leading-normal"
+                >Daj znać, co możemy dla Ciebie zrobić!</span
+              >
+              <button
+                class="px-6 pt-3 pb-3.5 bg-green-900 rounded-[200px] justify-start items-center gap-2.5 flex"
+              >
+                <span
+                  class="text-center text-stone-100 text-base font-normal leading-normal"
+                  >Skontaktuj się z nami</span
+                >
+              </button>
+            </div>
+          </div>
+          <div class="self-stretch h-[0px] border border-stone-100"></div>
+          <div class="self-stretch justify-between items-start inline-flex">
+            <ul class="justify-start items-center gap-12 mr-auto flex">
+              <li
+                class="text-center text-stone-100 text-sm font-normal leading-[21px]"
+              >
+                <a href="#">Kontakt</a>
+              </li>
+              <li
+                class="text-center text-stone-100 text-sm font-normal leading-[21px]"
+              >
+                <a href="#">Instagram</a>
+              </li>
+              <li
+                class="text-center text-stone-100 text-sm font-normal leading-[21px]"
+              >
+                <a href="#">Facebook</a>
+              </li>
+              <li
+                class="text-center text-stone-100 text-sm font-normal leading-[21px]"
+              >
+                <a href="#">LinkedIn</a>
+              </li>
+            </ul>
+            <ul class="justify-start items-start gap-12 flex">
+              <li class="text-stone-100 text-sm font-normal leading-[21px]">
+                <a href="tel:000000000">000-000-000</a>
+              </li>
+              <li class="text-stone-100 text-sm font-normal leading-[21px]">
+                <a href="mailto:giarddesign@kontakt.pl"
+                  >giarddesign@kontakt.pl</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="self-stretch items-center inline-flex">
+          <span
+            class="text-stone-100 text-base font-normal leading-normal mr-auto"
+          >
+            Prawa zastrzeżone © 2022
+          </span>
+          <div class="justify-start items-center gap-4 flex">
+            <span class="text-stone-100 text-base font-normal leading-normal">
+              made by
+            </span>
+            <svg class="w-[113px] h-[23px] relative">
+              <use href="./src/images/icons.svg#icon-logo-full-light"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
