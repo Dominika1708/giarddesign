@@ -12,7 +12,7 @@ menuBtn.addEventListener("click", () => {
 
     menuBtn.classList.toggle("rotate-45")
     menuBtn.classList.toggle("fixed")
-    menuBtn.classList.toggle("right-6")
+    menuBtn.classList.toggle("right-0")
 
     menu.classList.toggle("hidden")
 

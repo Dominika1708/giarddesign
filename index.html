@@ -9,13 +9,13 @@
   <body>
     <header class="mx-auto">
       <div
-        class="py-6 px-6 bg-white self-stretch justify-between items-center flex md:px-20 relative"
+        class="py-6 bg-white self-stretch justify-between items-center flex md:px-20 relative"
       >
-        <svg class="w-[114px] h-[19px]">
+        <svg class="w-[114px] h-[19px] pl-6 md:pl-0">
           <use href="./src/images/icons.svg#icon-giarddesign"></use>
         </svg>
 
-        <nav class="ml-auto hidden md:p-0 md:block md:static">
+        <nav class="ml-auto pr-6 hidden md:p-0 md:block md:static">
           <ul
             class="justify-start items-center gap-12 md:flex"
           >
@@ -72,7 +72,7 @@
         </nav>
 
         <!-- MENU FOR MOBILE -->
-        <button id="menu-btn" type="button" class="z-30 md:hidden">
+        <button id="menu-btn" type="button" class="z-30 pr-6 md:hidden">
           <span class="block mb-1 w-6 h-1 bg-neutral-900"></span>
           <span class="block mb-1 w-6 h-1 bg-neutral-900"></span>
           <span class="block w-6 h-1 bg-neutral-900"></span>
@@ -117,15 +117,15 @@
     <main>
       <!-- HERO -->
 
-      <section class=" px-6 bg-orange-200 justify-center items-center gap-16 flex md:px-20">
+      <section class=" pl-6 bg-orange-200 items-center justify-end flex md:pl-20 relative">
         <div
-          class="w-[599px] flex-col justify-start items-start gap-[72px] inline-flex"
+          class="h-[737px] mr-16 xl:mr-auto flex-col justify-center items-start gap-[72px] flex"
         >
           <div
             class="self-stretch h-[326px] flex-col justify-start items-start gap-11 flex"
           >
             <h1
-              class="w-[599px] text-neutral-900 text-6xl font-medium leading-[70px]"
+              class="max-w-[599px] text-neutral-900 text-6xl font-medium leading-[70px]"
             >
               Nowoczesna aranżacja<br />Twojego ogrodu
             </h1>
@@ -161,17 +161,15 @@
           </div>
         </div>
         <div
-          class="w-[688px] h-[737px] relative md:bg-white md:bg-opacity-10 justify-end items-center inline-flex"
+          class="md:bg-white md:bg-opacity-10 justify-end flex"
         >
           <img
-            class="w-[688px] h-[737px] hidden md:block"
+            class="w-[688px] h-[737px] hidden object-cover md:block"
             src="./src/images/Photohero.jpg"
             alt="hero background"
-            width="688"
-            height="737"
           />
           <div
-            class="absolute self-stretch px-12 py-9 bg-stone-100 bottom-0 justify-start items-start gap-11 inline-flex"
+            class="absolute self-stretch px-12 py-9 bg-stone-100 bottom-0 gap-11 flex"
           >
             <svg
               class="w-[26px] h-[26px] flex-col justify-center items-center gap-2.5 inline-flex"
@@ -190,10 +188,10 @@
       <!-- OFFER -->
 
       <section
-        class="pt-[120px] pb-40 bg-stone-100 flex-col justify-center items-center gap-24 flex"
+        class="pt-[120px] pb-40 px-6 bg-stone-100 flex-col justify-center items-center gap-24 flex"
       >
         <div
-          class="w-[1040px] h-[193px] flex-col justify-start items-start gap-4 inline-flex"
+          class="flex-col justify-start items-start gap-4 inline-flex"
         >
           <p
             id="oferta"
@@ -202,7 +200,7 @@
             Oferta
           </p>
           <div
-            class="w-[709px] h-[159px] flex-col justify-start items-start gap-8 inline-flex"
+            class="flex-col justify-start items-start gap-8 inline-flex"
           >
             <h2 class="self-stretch">
               <span
@@ -214,7 +212,7 @@
                 >kompleksowo</span
               >
             </h2>
-            <p class="text-neutral-900 text-base font-normal leading-normal">
+            <p class=" md:w-[709px] text-neutral-900 text-base font-normal leading-normal">
               Oferujemy kompletną obsługę inwestycji terenów zielonych.
               Projektujemy nowoczesne ogrody przydomowe oraz rezydencjonalne.
               Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w
@@ -225,24 +223,24 @@
         </div>
 
         <div
-          class="w-[1440px] h-[370px] px-[88px] bg-stone-100 justify-center items-start gap-16 inline-flex"
+          class="px-[88px] bg-stone-100 justify-center gap-16 flex flex-wrap"
         >
           <div
-            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+            class="h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start flex"
           >
             <div
-              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+              class="flex-col items-start gap-8 flex"
             >
               <img
-                class="w-10 h-10 p-0.5 justify-center items-center inline-flex"
+                class="w-10 h-10 p-0.5"
                 src="./src/images/offer/pen.png"
                 alt="pen"
               />
               <div
-                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+                class="self-stretch flex-col gap-3 flex"
               >
                 <h3
-                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                  class="text-neutral-900 text-[28px] font-medium leading-loose"
                 >
                   Projekty
                 </h3>
@@ -255,10 +253,10 @@
               </div>
             </div>
             <button
-              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+              class="h-7 pb-1 border-b border-green-900 items-center gap-2.5 flex"
             >
               <span
-                class="text-center text-green-900 text-base font-normal leading-normal"
+                class="text-green-900 text-base font-normal leading-normal"
                 >Dowiedz się więcej</span
               ><svg class="w-4 h-4 fill-green-900">
                 <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
@@ -267,21 +265,21 @@
           </div>
 
           <div
-            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+            class=" h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start flex"
           >
             <div
-              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+              class="flex-col items-start gap-8 flex"
             >
               <img
-                class="w-12 h-11 pt-2 pb-[7.04px] justify-center items-center inline-flex"
+                class="w-12 h-11 pt-2 pb-[7.04px]"
                 src="./src/images/offer/eye.png"
                 alt="eye"
               />
               <div
-                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+                class="self-stretch flex-col gap-3 flex"
               >
                 <h3
-                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                  class="text-neutral-900 text-[28px] font-medium leading-loose"
                 >
                   Wizualizacje
                 </h3>
@@ -294,10 +292,10 @@
               </div>
             </div>
             <button
-              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+              class="h-7 pb-1 border-b border-green-900 items-center gap-2.5 flex"
             >
               <span
-                class="text-center text-green-900 text-base font-normal leading-normal"
+                class="text-green-900 text-base font-normal leading-normal"
                 >Dowiedz się więcej</span
               ><svg class="w-4 h-4 fill-green-900">
                 <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
@@ -306,21 +304,21 @@
           </div>
 
           <div
-            class="w-[378px] h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start gap-8 inline-flex"
+            class="h-[370px] px-10 py-12 bg-white rounded-[28px] flex-col justify-between items-start flex"
           >
             <div
-              class="w-[298px] h-[183px] flex-col justify-start items-start gap-8 inline-flex"
+              class="flex-col items-start gap-8 flex"
             >
               <img
-                class="w-11 h-11 justify-center items-center inline-flex"
+                class="w-11 h-11"
                 src="./src/images/offer/stars.png"
                 alt="stars"
               />
               <div
-                class="self-stretch h-[107px] flex-col justify-start items-center gap-3 flex"
+                class="self-stretch flex-col gap-3 flex"
               >
                 <h3
-                  class="w-[298px] text-neutral-900 text-[28px] font-medium leading-loose"
+                  class="text-neutral-900 text-[28px] font-medium leading-loose"
                 >
                   Realizacje
                 </h3>
@@ -333,10 +331,10 @@
               </div>
             </div>
             <button
-              class="h-7 pb-1 border-b border-green-900 justify-start items-center gap-2.5 inline-flex"
+              class="h-7 pb-1 border-b border-green-900 items-center gap-2.5 flex"
             >
               <span
-                class="text-center text-green-900 text-base font-normal leading-normal"
+                class="text-green-900 text-base font-normal leading-normal"
                 >Zobacz nasze realizacje</span
               ><svg class="w-4 h-4 fill-green-900">
                 <use href="./src/images/icons.svg#icon-arrow-left-sml"></use>
@@ -350,24 +348,24 @@
 
       <section
         id="oFirmie"
-        class="bg-green-900 justify-center items-center gap-16 flex"
+        class="h-[720px] pr-6 bg-green-900 items-center gap-16 flex md:pr-20"
       >
         <img
-          class="w-[688px] h-[720px] relative"
+          class="w-[688px] h-[720px] hidden object-cover overflow-hidden md:flex"
           src="./src/images/Photoabout.jpg"
           alt="about company section photo"
         />
         <div
-          class="w-[596px] h-[450px] pl-24 flex-col justify-start items-start gap-[72px] inline-flex"
+          class="pl-6 flex-col items-start gap-[72px] flex md:pl-24 md:min-w-[496px]"
         >
           <div
-            class="w-[500px] h-[328px] flex-col justify-start items-start gap-4 inline-flex"
+            class="max-w-[500px] flex-col gap-4 flex"
           >
             <p class="text-stone-100 text-xs font-normal leading-[18px]">
               O firmie
             </p>
             <div
-              class="w-[500px] h-[294px] flex-col justify-start items-start gap-10 inline-flex"
+              class=" flex-col gap-10 flex"
             >
               <h2>
                 <span
@@ -389,10 +387,10 @@
             </div>
           </div>
           <button
-            class="h-[50px] px-[22px] pt-3 pb-3.5 rounded-[200px] border border-stone-100 justify-start items-center gap-2 inline-flex"
+            class="h-[50px] px-[22px] pt-3 pb-3.5 rounded-[200px] border border-stone-100 items-center gap-2 flex"
           >
             <span
-              class="text-center text-stone-100 text-base font-normal leading-normal"
+              class="text-stone-100 text-base font-normal leading-normal"
               >Poznaj nas bliżej</span
             >
             <svg class="w-4 h-4 fill-stone-100">
@@ -432,7 +430,7 @@
           ></div>
 
           <button
-            class="w-fit h-[50px] px-[22px] pt-3 pb-3.5 mx-auto inset-x-0 bottom-11 absolute rounded-[200px] border border-neutral-900 justify-center items-center gap-2 flex"
+            class="w-fit h-[50px] px-[22px] pt-3 pb-3.5 mx-auto inset-x-0 bottom-11 absolute rounded-[200px] border border-neutral-900 justify-center items-center gap-2 flex animate-bounce"
           >
             <span
               class="text-center text-neutral-900 text-base font-normal leading-normal"
@@ -449,12 +447,12 @@
 
       <section
         id="kontakt"
-        class="py-[60px] bg-stone-100 flex-col justify-center items-center gap-2.5 flex"
+        class="py-[20px] bg-stone-100 flex-col items-center gap-2.5 flex md:py-[60px]"
       >
         <div
-          class="w-[1040px] px-[110px] py-[120px] bg-green-900 justify-start items-end gap-16 inline-flex"
+          class="px-[40px] py-[60px] md:px-[110px] md:py-[120px] bg-green-900 gap-16 md:flex"
         >
-          <h2 class="w-[599px]">
+          <h2 class="max-w-[599px] pb-16 md:pb-0">
             <span class="text-stone-100 text-[40px] font-normal leading-[48px]"
               >Zostańmy w kontakcie! Znajdziesz nas na </span
             ><span
@@ -465,10 +463,10 @@
             >
           </h2>
           <div
-            class="w-[157px] flex-col justify-start items-start gap-6 inline-flex"
+            class="flex-col justify-center items-start gap-6 flex"
           >
             <p
-              class="self-stretch text-stone-100 text-base font-normal leading-normal"
+              class="w-[157px] text-stone-100 text-base font-normal leading-normal"
             >
               Śledź nasze najnowsze realizacje!
             </p>
@@ -488,16 +486,16 @@
 
     <footer class="bg-neutral-900">
       <div
-        class="w-[1440px] h-[499px] mx-auto px-48 py-20 flex-col justify-start items-center gap-[120px] flex"
+        class="mx-auto px-12 xl:px-48 py-20 flex-col gap-[120px] flex"
       >
         <div
-          class="h-[195px] self-stretch flex-col justify-start items-start gap-[62px] flex"
+          class="self-stretch flex-col justify-start items-start gap-[62px] flex"
         >
-          <div class="self-stretch justify-between items-center inline-flex">
+          <div class="self-stretch justify-between items-center flex">
             <svg class="w-[114px] h-[19px] fill-stone-100 mr-auto">
               <use href="./src/images/icons.svg#icon-giarddesign"></use>
             </svg>
-            <div class="justify-start items-center gap-6 flex">
+            <div class="flex-col items-center gap-6 flex md:flex-row">
               <span class="text-stone-100 text-base font-normal leading-normal"
                 >Daj znać, co możemy dla Ciebie zrobić!</span
               >
@@ -512,8 +510,8 @@
             </div>
           </div>
           <div class="self-stretch h-[0px] border border-stone-100"></div>
-          <div class="self-stretch justify-between items-start inline-flex">
-            <ul class="justify-start items-center gap-12 mr-auto flex">
+          <div class="self-stretch justify-between items-center flex">
+            <ul class="flex-col gap-3 items-center md:flex-row md:gap-12 mr-auto flex">
               <li
                 class="text-center text-stone-100 text-sm font-normal leading-[21px]"
               >
@@ -535,7 +533,7 @@
                 <a href="#">LinkedIn</a>
               </li>
             </ul>
-            <ul class="justify-start items-start gap-12 flex">
+            <ul class="flex-col gap-12 md:flex-row flex">
               <li class="text-stone-100 text-sm font-normal leading-[21px]">
                 <a href="tel:000000000">000-000-000</a>
               </li>
@@ -547,17 +545,17 @@
             </ul>
           </div>
         </div>
-        <div class="self-stretch items-center inline-flex">
+        <div class="flex-col justify-between items-center flex md:flex-row">
           <span
             class="text-stone-100 text-base font-normal leading-normal mr-auto"
           >
             Prawa zastrzeżone © 2022
           </span>
-          <div class="justify-start items-center gap-4 flex">
+          <div class="ml-auto gap-4 flex">
             <span class="text-stone-100 text-base font-normal leading-normal">
               made by
             </span>
-            <svg class="w-[113px] h-[23px] relative">
+            <svg class="w-[113px] h-[23px]">
               <use href="./src/images/icons.svg#icon-logo-full-light"></use>
             </svg>
           </div>
