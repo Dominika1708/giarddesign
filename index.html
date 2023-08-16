@@ -1,33 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
     <title>Giarddesign</title>
   </head>
-  <body class="bg-white flex-col flex">
-    <header class="w-[1262px] mx-auto">
-      <div class="py-6 bg-white self-stretch justify-between items-center flex">
+  <body>
+    <header class="mx-auto">
+      <div
+        class="py-6 px-6 bg-white self-stretch justify-between items-center flex md:px-20 relative"
+      >
         <svg class="w-[114px] h-[19px]">
           <use href="./src/images/icons.svg#icon-giarddesign"></use>
         </svg>
 
-        <nav class="ml-auto">
+        <nav class="ml-auto hidden md:p-0 md:block md:static">
           <ul
-            class="w-[442px] h-6 justify-start items-center gap-12 inline-flex"
+            class="justify-start items-center gap-12 md:flex"
           >
             <li>
               <button
                 type="button"
-                class="w-[59px] h-[21px] justify-start items-center gap-[5px] inline-flex"
+                class=" justify-start items-center gap-[5px] flex"
               >
                 <span
                   class="text-neutral-900 text-sm font-normal leading-[21px]"
                 >
                   Oferta
                 </span>
-                <svg class="w-3 h-3 relative">
+                <svg class="w-3 h-3">
                   <use href="./src/images/icons.svg#icon-arrow-down-sml"></use>
                 </svg>
               </button>
@@ -68,13 +70,54 @@
             </li>
           </ul>
         </nav>
+
+        <!-- MENU FOR MOBILE -->
+        <button id="menu-btn" type="button" class="z-30 md:hidden">
+          <span class="block mb-1 w-6 h-1 bg-neutral-900"></span>
+          <span class="block mb-1 w-6 h-1 bg-neutral-900"></span>
+          <span class="block w-6 h-1 bg-neutral-900"></span>
+        </button>
+        <nav id="menu" class="ml-auto p-14 h-screen z-20 hidden bg-neutral-900 bg-opacity-40 fixed right-0 top-0 md:hidden">
+          <ul class="justify-start items-center gap-12 md:flex">
+            <li>
+              <button type="button" class=" justify-start items-center gap-[5px] flex">
+                <span class="text-stone-100 text-sm font-normal leading-[21px]">
+                  Oferta
+                </span>
+                <svg class="w-3 h-3 fill-stone-100">
+                  <use href="./src/images/icons.svg#icon-arrow-down-sml"></use>
+                </svg>
+              </button>
+            </li>
+        
+            <li>
+              <a class="text-center text-stone-100 text-sm font-normal leading-[21px]" href="#oFirmie">O firmie</a>
+            </li>
+        
+            <li>
+              <a class="text-center text-stone-100 text-sm font-normal leading-[21px]" href="#realizacje">Realizacje</a>
+            </li>
+        
+            <li>
+              <a class="text-center text-stone-100 text-sm font-normal leading-[21px]" href="#kontakt">Kontakt</a>
+            </li>
+        
+            <li>
+              <button class="w-6 h-6 relative">
+                <svg class="w-[19.50px] h-[19.50px] left-[2.25px] top-[2.25px] absolute fill-stone-100">
+                  <use href="./src/images/icons.svg#icon-search"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
       <!-- HERO -->
 
-      <section class="bg-orange-200 justify-center items-center gap-16 flex">
+      <section class=" px-6 bg-orange-200 justify-center items-center gap-16 flex md:px-20">
         <div
           class="w-[599px] flex-col justify-start items-start gap-[72px] inline-flex"
         >
@@ -118,10 +161,10 @@
           </div>
         </div>
         <div
-          class="w-[688px] h-[737px] relative bg-white bg-opacity-10 justify-end items-center inline-flex"
+          class="w-[688px] h-[737px] relative md:bg-white md:bg-opacity-10 justify-end items-center inline-flex"
         >
           <img
-            class="w-[688px] h-[737px]"
+            class="w-[688px] h-[737px] hidden md:block"
             src="./src/images/Photohero.jpg"
             alt="hero background"
             width="688"
@@ -405,6 +448,7 @@
       <!-- INSTAGRAM -->
 
       <section
+        id="kontakt"
         class="py-[60px] bg-stone-100 flex-col justify-center items-center gap-2.5 flex"
       >
         <div
@@ -442,7 +486,7 @@
     </main>
     <!-- FOOTER -->
 
-    <footer class=" bg-neutral-900 ">
+    <footer class="bg-neutral-900">
       <div
         class="w-[1440px] h-[499px] mx-auto px-48 py-20 flex-col justify-start items-center gap-[120px] flex"
       >
@@ -520,5 +564,6 @@
         </div>
       </div>
     </footer>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
