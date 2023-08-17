@@ -4,10 +4,10 @@ const menuBtn = document.querySelector("#menu-btn");
 const search = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
 
-const offerMenu = document.querySelector("#offer-menu")
-const offerBtn = document.querySelector("#offer-btn")
-const mobileOfferMenu = document.querySelector("#mobile-offer-menu")
-const mobileOfferBtn = document.querySelector("#mobile-offer-btn")
+const offerMenu = document.querySelector("#offer-menu");
+const offerBtn = document.querySelector("#offer-btn");
+const mobileOfferMenu = document.querySelector("#mobile-offer-menu");
+const mobileOfferBtn = document.querySelector("#mobile-offer-btn");
 
 //  Opens the menu on mobile
 
@@ -26,7 +26,6 @@ menuBtn.addEventListener("click", () => {
   menu.classList.toggle("translate-x-full");
 });
 
-
 // Opens search input
 
 const setBtnType = () => {
@@ -42,19 +41,18 @@ searchBtn.addEventListener("click", () => {
   setTimeout(setBtnType, 500);
 });
 
-
 // Opens offer menu
 
 offerBtn.addEventListener("click", () => {
-    offerMenu.classList.toggle("opacity-0")
-    offerMenu.classList.toggle("-translate-y-full")
-    offerMenu.classList.toggle("pointer-events-none")
-})
+  offerMenu.classList.toggle("opacity-0");
+  offerMenu.classList.toggle("-translate-y-full");
+  offerMenu.classList.toggle("pointer-events-none");
+});
 
 mobileOfferBtn.addEventListener("click", () => {
-    mobileOfferMenu.classList.toggle("opacity-0")
-    mobileOfferMenu.classList.toggle("-translate-y-full")
-    mobileOfferMenu.classList.toggle("pointer-events-none")
-    mobileOfferMenu.classList.toggle("pt-4")
-    mobileOfferMenu.classList.toggle("h-0")
-})
+  mobileOfferMenu.classList.toggle("opacity-0");
+  mobileOfferMenu.classList.toggle("-translate-y-full");
+  mobileOfferMenu.classList.toggle("pointer-events-none");
+  mobileOfferMenu.classList.toggle("pt-4");
+  mobileOfferMenu.classList.toggle("h-0");
+});

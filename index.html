@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script type="module" src="./src/js/index.js"></script>
     <title>Giarddesign</title>
   </head>
   <body>
@@ -72,7 +74,7 @@
             <li>
               <a
                 class="text-neutral-900 text-sm font-normal leading-[21px]"
-                href="#realizacje"
+                href="#projects"
                 >Realizacje</a
               >
             </li>
@@ -195,7 +197,7 @@
             <li>
               <a
                 class="text-stone-100 text-sm font-normal leading-[21px]"
-                href="#realizacje"
+                href="#projects"
                 >Realizacje</a
               >
             </li>
@@ -485,7 +487,7 @@
       <!-- PROJECTS -->
 
       <section
-        id="realizacje"
+        id="projects"
         class="pt-[120px] pb-11 bg-orange-200 flex-col justify-center items-start gap-24 flex"
       >
         <div
@@ -504,11 +506,71 @@
             >
           </h2>
         </div>
-        <div class="w-full h-[1475px] relative">
-          <!-- PLACE FOR PHOTO GALLERY -->
+        <div class="px-6 md:px-24 w-full relative">
+          <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100, "fitWidth": true }'>
+            <img
+              src="./src/images/projects/Photo-0.jpg"
+              alt="gallery photo-0"
+              class="grid-item p-[21px]"
+              width="451"
+              height="338"
+            />
+            <img
+              src="./src/images/projects/Photo-1.jpg"
+              alt="gallery photo-1"
+              class="grid-item p-[21px]"
+              width="452"
+              height="601"
+            /><img
+              src="./src/images/projects/Photo-2.jpg"
+              alt="gallery photo-2"
+              class="grid-item p-[21px]"
+              width="451"
+              height="338"
+            />
+            <img
+              src="./src/images/projects/Photo-3.jpg"
+              alt="gallery photo-3"
+              class="grid-item p-[21px]"
+              width="451"
+              height="603"
+            /><img
+              src="./src/images/projects/Photo-4.jpg"
+              alt="gallery photo-4"
+              class="grid-item p-[21px]"
+              width="452"
+              height="452"
+            />
+            <img
+              src="./src/images/projects/Photo-5.jpg"
+              alt="gallery photo-5"
+              class="grid-item p-[21px]"
+              width="451"
+              height="452"
+            /><img
+              src="./src/images/projects/Photo-6.jpg"
+              alt="gallery photo-6"
+              class="grid-item p-[21px]"
+              width="451"
+              height="451"
+            />
+            <img
+              src="./src/images/projects/Photo-7.jpg"
+              alt="gallery photo-7"
+              class="grid-item p-[21px]"
+              width="452"
+              height="338"
+            /><img
+              src="./src/images/projects/Photo-8.jpg"
+              alt="gallery photo-8"
+              class="grid-item p-[21px]"
+              width="451"
+              height="601"
+            />
+          </div>
 
           <div
-            class="w-full h-[1000px] left-0 top-[475px] absolute bg-gradient-to-t from-red-300 to-orange-200"
+            class="w-full h-full left-0 top-0 absolute bg-gradient-to-t from-orange-200"
           ></div>
 
           <button
@@ -632,6 +694,5 @@
         </div>
       </div>
     </footer>
-    <script src="./src/js/index.js"></script>
   </body>
 </html>
