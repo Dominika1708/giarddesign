@@ -36,7 +36,7 @@ const setBtnType = () => {
 
 searchBtn.addEventListener("click", () => {
   search.classList.toggle("border");
-  search.classList.toggle("w-[150px]");
+  search.classList.toggle("w-[26px]");
   search.focus();
   setTimeout(setBtnType, 500);
 });

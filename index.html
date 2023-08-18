@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./dist/output.css" rel="stylesheet" />
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-    <script src="./src/js/index.js"></script>
     <title>Giarddesign</title>
   </head>
   <body>
@@ -92,7 +91,7 @@
                 <input
                   id="search-input"
                   type="text"
-                  class="w-[26px] h-[26px] mt-[0.5px] border-neutral-900 rounded-full pl-[10px] transition-[all] focus:"
+                  class="w-[26px] h-[26px] mt-[0.5px] border-neutral-900 rounded-full pl-[10px] transition-[all]"
                 />
                 <button
                   id="search-btn"
@@ -112,7 +111,7 @@
         <button
           id="menu-btn"
           type="button"
-          class="z-30 pr-6 md:hidden delay-700 transition-all duration-300"
+          class="z-30 pr-6 md:hidden delay-700 transition-all duration-300 "
         >
           <span
             class="block mb-1 w-6 h-1 bg-neutral-900 delay-300 transition-all"
@@ -507,7 +506,10 @@
           </h2>
         </div>
         <div class="px-6 md:px-24 w-full relative">
-          <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100, "fitWidth": true }'>
+          <div
+            class="grid"
+            data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 100, "fitWidth": true }'
+          >
             <img
               src="./src/images/projects/Photo-0.jpg"
               alt="gallery photo-0"
@@ -694,5 +696,6 @@
         </div>
       </div>
     </footer>
+    <script src="./src/js/index.js"></script>
   </body>
 </html>
