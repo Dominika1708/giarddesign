@@ -9,21 +9,26 @@ const offerBtn = document.querySelector("#offer-btn");
 const mobileOfferMenu = document.querySelector("#mobile-offer-menu");
 const mobileOfferBtn = document.querySelector("#mobile-offer-btn");
 
+const galley = document.querySelector("#gellery-dropdown");
+const galleryBtn = document.querySelector("#gellery-btn");
+
+const classToggle = (element, styles) => {
+  for (const style of styles) {
+    element.classList.toggle(style);
+  }
+};
+
 //  Opens the menu on mobile
 
 menuBtn.addEventListener("click", () => {
-  menuBtn.firstElementChild.classList.toggle("translate-y-2");
-  menuBtn.firstElementChild.classList.toggle("bg-white");
-
-  menuBtn.lastElementChild.classList.toggle("-translate-y-2");
-  menuBtn.lastElementChild.classList.toggle("rotate-90");
-  menuBtn.lastElementChild.classList.toggle("bg-white");
-
-  menuBtn.classList.toggle("rotate-45");
-  menuBtn.classList.toggle("fixed");
-  menuBtn.classList.toggle("right-0");
-
-  menu.classList.toggle("translate-x-full");
+  classToggle(menuBtn.firstElementChild, ["translate-y-2", "bg-white"]);
+  classToggle(menuBtn.lastElementChild, [
+    "-translate-y-2",
+    "rotate-90",
+    "bg-white",
+  ]);
+  classToggle(menuBtn, ["rotate-45", "fixed", "right-0"]);
+  classToggle(menu, ["translate-x-full"]);
 });
 
 // Opens search input
@@ -35,8 +40,7 @@ const setBtnType = () => {
 };
 
 searchBtn.addEventListener("click", () => {
-  search.classList.toggle("border");
-  search.classList.toggle("w-[26px]");
+  classToggle(search, ["border", "w-[26px]"]);
   search.focus();
   setTimeout(setBtnType, 500);
 });
@@ -44,15 +48,19 @@ searchBtn.addEventListener("click", () => {
 // Opens offer menu
 
 offerBtn.addEventListener("click", () => {
-  offerMenu.classList.toggle("opacity-0");
-  offerMenu.classList.toggle("-translate-y-full");
-  offerMenu.classList.toggle("pointer-events-none");
+  classToggle(offerMenu, [
+    "opacity-0",
+    "-translate-y-full",
+    "pointer-events-none",
+  ]);
 });
 
 mobileOfferBtn.addEventListener("click", () => {
-  mobileOfferMenu.classList.toggle("opacity-0");
-  mobileOfferMenu.classList.toggle("-translate-y-full");
-  mobileOfferMenu.classList.toggle("pointer-events-none");
-  mobileOfferMenu.classList.toggle("pt-4");
-  mobileOfferMenu.classList.toggle("h-0");
+  classToggle(mobileOfferMenu, [
+    "opacity-0",
+    "-translate-y-full",
+    "pointer-events-none",
+    "pt-4",
+    "h-0",
+  ]);
 });
