@@ -4,7 +4,6 @@
     "tailwindcss": "^3.3.3"
   },
   "dependencies": {
-    "masonry-layout": "^4.2.2",
-    "simplelightbox": "^2.14.1"
+    "masonry-layout": "^4.2.2"
   }
 }

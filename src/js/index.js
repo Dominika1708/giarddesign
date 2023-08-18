@@ -1,5 +1,3 @@
-import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
-
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
 
@@ -73,5 +71,3 @@ galleryBtn.addEventListener("click", () => {
   classToggle(galleryBtn, ["hidden"]);
   classToggle(gallery, ["opacity-0"]);
 });
-
-const lightbox = new SimpleLightbox('.gallery a')
