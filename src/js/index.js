@@ -1,5 +1,4 @@
-import Masonry from "masonry-layout";
-import simpleLightbox from "simplelightbox";
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
 
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
@@ -75,10 +74,4 @@ galleryBtn.addEventListener("click", () => {
   classToggle(gallery, ["opacity-0"]);
 });
 
-new Masonry(".grid", {
-  itemSelector: ".grid-item",
-  columnWidth: 10,
-  fitWidth: true,
-});
-
-new simpleLightbox(".gallery a");
+const lightbox = new SimpleLightbox('.gallery a')
