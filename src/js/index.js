@@ -1,3 +1,5 @@
+import SimpleLightbox from "simplelightbox/dist/simple-lightbox.esm";
+
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
 
@@ -9,8 +11,8 @@ const offerBtn = document.querySelector("#offer-btn");
 const mobileOfferMenu = document.querySelector("#mobile-offer-menu");
 const mobileOfferBtn = document.querySelector("#mobile-offer-btn");
 
-const galley = document.querySelector("#gellery-dropdown");
-const galleryBtn = document.querySelector("#gellery-btn");
+const gallery = document.querySelector("#gallery-dropdown");
+const galleryBtn = document.querySelector("#gallery-btn");
 
 const classToggle = (element, styles) => {
   for (const style of styles) {
@@ -64,3 +66,12 @@ mobileOfferBtn.addEventListener("click", () => {
     "h-0",
   ]);
 });
+
+// Shows all project's photos
+
+galleryBtn.addEventListener("click", () => {
+  classToggle(galleryBtn, ["hidden"]);
+  classToggle(gallery, ["opacity-0"]);
+});
+
+const lightbox = new SimpleLightbox('.gallery a')
