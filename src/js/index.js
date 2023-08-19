@@ -1,4 +1,4 @@
-import Masonry from "../../node_modules/masonry-layout";
+import Masonry from "../../node_modules/masonry-layout/masonry";
 
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
