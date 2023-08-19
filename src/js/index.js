@@ -1,3 +1,5 @@
+const Masonry = require("masonry-layout");
+
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
 
@@ -70,4 +72,10 @@ mobileOfferBtn.addEventListener("click", () => {
 galleryBtn.addEventListener("click", () => {
   classToggle(galleryBtn, ["hidden"]);
   classToggle(gallery, ["opacity-0"]);
+});
+
+new Masonry(".grid", {
+  itemSelector: ".grid-item",
+  columnWidth: 10,
+  fitWidth: true,
 });
