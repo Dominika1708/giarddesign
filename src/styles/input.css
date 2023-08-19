@@ -1,3 +1,66 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.slideToNext {
+  animation-name: slideToNext;
+  animation-duration: 1.5s;
+}
+.slideFromNext {
+    animation-name: slideFromNext;
+    animation-duration: 1.5s;
+}
+.slideToPrev {
+    animation-name: slideToPrev;
+    animation-duration: 1.5s;
+}
+.slideFromPrev {
+    animation-name: slideFromPrev;
+    animation-duration: 1.5s;
+}
+
+
+@keyframes slideToNext {
+  from {
+    transform: translateX(100%);
+    display: none;
+  }
+
+  to {
+    transform: translateX(0);
+    display: flex;
+  }
+}
+@keyframes slideFromNext {
+  from {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  to {
+    transform: translateX(-100%);
+    display: none;
+  }
+}
+@keyframes slideToPrev {
+  from {
+    transform: translateX(-100%);
+    display: none;
+  }
+
+  to {
+    transform: translateX(0);
+    display: flex;
+  }
+}
+@keyframes slideFromPrev {
+  from {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  to {
+    transform: translateX(100%);
+    display: none;
+  }
+}

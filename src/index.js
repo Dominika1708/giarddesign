@@ -1,7 +1,8 @@
-const Masonry = require("masonry-layout");
-
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
+
+const sliders = document.querySelectorAll('.slider')
+const sliderBtn = document.querySelector('#hero-btn')
 
 const search = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
@@ -67,15 +68,42 @@ mobileOfferBtn.addEventListener("click", () => {
   ]);
 });
 
+
+// Sliders in Hero section
+
+let nextSliderIndex = 0
+let currenrtSliderIndex = null
+const sliderAnimations =["slideFromNext", "slideToNext", "slideFromPrev", "slideToPrev"]
+
+const nextSlide = (current, next) => {
+  sliders[current].classList.remove(...sliderAnimations)
+  sliders[next].classList.remove(...sliderAnimations)
+  classToggle(sliders[current], ["hidden", "slideFromNext"]);
+  classToggle(sliders[next], ["hidden", "slideToNext"])
+}
+const prevSlide = (current, next) => {
+  sliders[current].classList.remove(...sliderAnimations)
+  sliders[next].classList.remove(...sliderAnimations)
+  classToggle(sliders[current], ["hidden", "slideFromPrev"]);
+  classToggle(sliders[next], ["hidden", "slideToPrev"])
+}
+
+sliderBtn.addEventListener("click", (e) => {
+  currenrtSliderIndex = nextSliderIndex
+  if (e.target.id === "btn-prev") {
+    nextSliderIndex === 0 ? nextSliderIndex = sliders.length - 1 : nextSliderIndex -= 1
+    prevSlide(currenrtSliderIndex, nextSliderIndex)
+  }
+  if (e.target.id === "btn-next") {
+    nextSliderIndex === sliders.length -1 ? nextSliderIndex = 0 : nextSliderIndex +=  1
+    nextSlide(currenrtSliderIndex, nextSliderIndex)
+  }
+})
+
+
 // Shows all project's photos
 
 galleryBtn.addEventListener("click", () => {
   classToggle(galleryBtn, ["hidden"]);
   classToggle(gallery, ["opacity-0"]);
-});
-
-new Masonry(".grid", {
-  itemSelector: ".grid-item",
-  columnWidth: 10,
-  fitWidth: true,
 });
