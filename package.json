@@ -2,7 +2,7 @@
   "name": "giarddesign",
   "version": "1.0.0",
   "scripts": {
-    "start": "parcel ./index.html"
+    "start": "webpack serve"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,12 @@
   "homepage": "https://dominika1708.github.io/giarddesign/",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "devDependencies": {
-    "parcel": "^2.9.3",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "masonry-layout": "^4.2.2"
+    "masonry-layout": "^4.2.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
   }
 }
