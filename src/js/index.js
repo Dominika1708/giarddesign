@@ -1,4 +1,4 @@
-import Masonry from "masonry-layout";
+const Masonry = require("masonry-layout");
 
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");

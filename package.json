@@ -1,7 +1,6 @@
 {
   "name": "giarddesign",
   "version": "1.0.0",
-  "module": "index.js",
   "scripts": {
     "start": "parcel ./index.html"
   },
