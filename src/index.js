@@ -19,7 +19,6 @@ const galleryBtn = document.querySelector("#gallery-btn");
 const modalBackdrop = document.querySelector("#backdrop");
 const modal = document.querySelector("#modal-img");
 
-
 const classToggle = (element, styles) => {
   for (const style of styles) {
     element.classList.toggle(style);
@@ -126,15 +125,16 @@ let nextImg = 0;
 
 gallery.addEventListener("click", (e) => {
   if (modalBackdrop.classList.contains("hidden")) {
+    if (e.target.alt === undefined) return;
     modal.src = `./src/images/projects/Photo-${e.target.alt}.jpg`;
     nextImg = Number(e.target.alt);
-  } 
+  }
   modalBackdrop.classList.remove("hidden");
-  
+
   if (e.target.id === "backdrop") {
     classToggle(modalBackdrop, ["hidden"]);
   }
-  if (e.target.id === "modal-prev") {  
+  if (e.target.id === "modal-prev") {
     nextImg === 0 ? (nextImg = gallery.children.length - 2) : (nextImg -= 1);
   }
   if (e.target.id === "modal-next") {
