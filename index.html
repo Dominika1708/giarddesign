@@ -6,6 +6,7 @@
     <link href="./src/styles/output.css" rel="stylesheet" />
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <title>Giarddesign</title>
+    <link rel="icon" type="image/png" href="./src/images/offer/stars.png">
   </head>
   <body>
     <header class="mx-auto">
@@ -631,65 +632,93 @@
           >
             <img
               src="./src/images/projects/Photo-0.jpg"
-              alt="gallery photo-0"
+              alt="0"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="338"
             />
             <img
               src="./src/images/projects/Photo-1.jpg"
-              alt="gallery photo-1"
+              alt="1"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="452"
               height="601"
             /><img
               src="./src/images/projects/Photo-2.jpg"
-              alt="gallery photo-2"
+              alt="2"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="338"
             />
             <img
               src="./src/images/projects/Photo-3.jpg"
-              alt="gallery photo-3"
+              alt="3"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="603"
             /><img
               src="./src/images/projects/Photo-4.jpg"
-              alt="gallery photo-4"
+              alt="4"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="452"
               height="452"
             />
             <img
               src="./src/images/projects/Photo-5.jpg"
-              alt="gallery photo-5"
+              alt="5"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="452"
             /><img
               src="./src/images/projects/Photo-6.jpg"
-              alt="gallery photo-6"
+              alt="6"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="451"
             />
             <img
               src="./src/images/projects/Photo-7.jpg"
-              alt="gallery photo-7"
+              alt="7"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="452"
               height="338"
             /><img
               src="./src/images/projects/Photo-8.jpg"
-              alt="gallery photo-8"
+              alt="8"
               class="grid-item m-[21px] hover:shadow-xl hover:border-4 cursor-pointer"
               width="451"
               height="601"
             />
-          </div>
 
+            <div
+              id="backdrop"
+              class="fixed left-0 top-0 w-full h-full z-20 bg-neutral-900 bg-opacity-40 hidden"
+            >
+              <button
+                id="modal-prev"
+                type="button"
+                class="z-30 rotate-90 p-1 bg-neutral-900 bg-opacity-60 rounded-full absolute left-1/4 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <svg class="w-8 h-8 fill-white pointer-events-none">
+                  <use href="./src/images/icons.svg#icon-arrow-down-sml"></use>
+                </svg>
+              </button>
+              <img
+                id="modal-img"
+                src="./src/images/projects/Photo-0.jpg"
+                class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              />
+              <button
+                id="modal-next"
+                type="button"
+                class="z-30 -rotate-90 p-1 bg-neutral-900 bg-opacity-60 rounded-full absolute left-3/4 top-1/2 -translate-x-1/2 -translate-y-1/2"
+              >
+                <svg class="w-8 h-8 fill-white pointer-events-none">
+                  <use href="./src/images/icons.svg#icon-arrow-down-sml"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
           <div
             id="gallery-dropdown"
             class="w-full h-full left-0 top-0 absolute bg-gradient-to-t from-orange-200 transition-all duration-700 pointer-events-none"

@@ -1,8 +1,8 @@
 const menu = document.querySelector("#menu");
 const menuBtn = document.querySelector("#menu-btn");
 
-const sliders = document.querySelectorAll('.slider')
-const sliderBtn = document.querySelector('#hero-btn')
+const sliders = document.querySelectorAll(".slider");
+const sliderBtn = document.querySelector("#hero-btn");
 
 const search = document.querySelector("#search-input");
 const searchBtn = document.querySelector("#search-btn");
@@ -12,8 +12,13 @@ const offerBtn = document.querySelector("#offer-btn");
 const mobileOfferMenu = document.querySelector("#mobile-offer-menu");
 const mobileOfferBtn = document.querySelector("#mobile-offer-btn");
 
-const gallery = document.querySelector("#gallery-dropdown");
+const gallery = document.querySelector(".gallery");
+const galleryDropdown = document.querySelector("#gallery-dropdown");
 const galleryBtn = document.querySelector("#gallery-btn");
+
+const modalBackdrop = document.querySelector("#backdrop");
+const modal = document.querySelector("#modal-img");
+
 
 const classToggle = (element, styles) => {
   for (const style of styles) {
@@ -68,42 +73,72 @@ mobileOfferBtn.addEventListener("click", () => {
   ]);
 });
 
-
 // Sliders in Hero section
 
-let nextSliderIndex = 0
-let currenrtSliderIndex = null
-const sliderAnimations =["slideFromNext", "slideToNext", "slideFromPrev", "slideToPrev"]
+let nextSliderIndex = 0;
+let currenrtSliderIndex = 0;
+const sliderAnimations = [
+  "slideFromNext",
+  "slideToNext",
+  "slideFromPrev",
+  "slideToPrev",
+];
 
 const nextSlide = (current, next) => {
-  sliders[current].classList.remove(...sliderAnimations)
-  sliders[next].classList.remove(...sliderAnimations)
+  sliders[current].classList.remove(...sliderAnimations);
+  sliders[next].classList.remove(...sliderAnimations);
   classToggle(sliders[current], ["hidden", "slideFromNext"]);
-  classToggle(sliders[next], ["hidden", "slideToNext"])
-}
+  classToggle(sliders[next], ["hidden", "slideToNext"]);
+};
 const prevSlide = (current, next) => {
-  sliders[current].classList.remove(...sliderAnimations)
-  sliders[next].classList.remove(...sliderAnimations)
+  sliders[current].classList.remove(...sliderAnimations);
+  sliders[next].classList.remove(...sliderAnimations);
   classToggle(sliders[current], ["hidden", "slideFromPrev"]);
-  classToggle(sliders[next], ["hidden", "slideToPrev"])
-}
+  classToggle(sliders[next], ["hidden", "slideToPrev"]);
+};
 
 sliderBtn.addEventListener("click", (e) => {
-  currenrtSliderIndex = nextSliderIndex
+  currenrtSliderIndex = nextSliderIndex;
   if (e.target.id === "btn-prev") {
-    nextSliderIndex === 0 ? nextSliderIndex = sliders.length - 1 : nextSliderIndex -= 1
-    prevSlide(currenrtSliderIndex, nextSliderIndex)
+    nextSliderIndex === 0
+      ? (nextSliderIndex = sliders.length - 1)
+      : (nextSliderIndex -= 1);
+    prevSlide(currenrtSliderIndex, nextSliderIndex);
   }
   if (e.target.id === "btn-next") {
-    nextSliderIndex === sliders.length -1 ? nextSliderIndex = 0 : nextSliderIndex +=  1
-    nextSlide(currenrtSliderIndex, nextSliderIndex)
+    nextSliderIndex === sliders.length - 1
+      ? (nextSliderIndex = 0)
+      : (nextSliderIndex += 1);
+    nextSlide(currenrtSliderIndex, nextSliderIndex);
   }
-})
-
+});
 
 // Shows all project's photos
 
 galleryBtn.addEventListener("click", () => {
   classToggle(galleryBtn, ["hidden"]);
-  classToggle(gallery, ["opacity-0"]);
+  classToggle(galleryDropdown, ["opacity-0"]);
+});
+
+// Open modal with ptoject's photos
+
+let nextImg = 0;
+
+gallery.addEventListener("click", (e) => {
+  if (modalBackdrop.classList.contains("hidden")) {
+    modal.src = `./src/images/projects/Photo-${e.target.alt}.jpg`;
+    nextImg = Number(e.target.alt);
+  } 
+  modalBackdrop.classList.remove("hidden");
+  
+  if (e.target.id === "backdrop") {
+    classToggle(modalBackdrop, ["hidden"]);
+  }
+  if (e.target.id === "modal-prev") {  
+    nextImg === 0 ? (nextImg = gallery.children.length - 2) : (nextImg -= 1);
+  }
+  if (e.target.id === "modal-next") {
+    nextImg === gallery.children.length - 2 ? (nextImg = 0) : (nextImg += 1);
+  }
+  modal.src = `./src/images/projects/Photo-${nextImg}.jpg`;
 });
