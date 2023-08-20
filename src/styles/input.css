@@ -5,62 +5,74 @@
 .slideToNext {
   animation-name: slideToNext;
   animation-duration: 1.5s;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+  visibility:visible;
 }
 .slideFromNext {
     animation-name: slideFromNext;
     animation-duration: 1.5s;
+    transition-property: visibility;
+    transition-delay: 1.5s;
+    visibility: hidden;
 }
 .slideToPrev {
     animation-name: slideToPrev;
     animation-duration: 1.5s;
+    transition-property: visibility;
+    transition-delay: 1.5s;
+    visibility:visible;
 }
 .slideFromPrev {
     animation-name: slideFromPrev;
     animation-duration: 1.5s;
+    transition-property: visibility;
+    transition-delay: 1.5s;
+    visibility: hidden;
 }
 
 
 @keyframes slideToNext {
   from {
     transform: translateX(100%);
-    display: none;
+    visibility: hidden;
   }
 
   to {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 }
 @keyframes slideFromNext {
   from {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 
   to {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
 }
 @keyframes slideToPrev {
   from {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
 
   to {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 }
 @keyframes slideFromPrev {
   from {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 
   to {
     transform: translateX(100%);
-    display: none;
+    visibility: hidden;
   }
 }

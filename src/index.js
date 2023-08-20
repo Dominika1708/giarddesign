@@ -85,16 +85,16 @@ const sliderAnimations = [
 ];
 
 const nextSlide = (current, next) => {
-  sliders[current].classList.remove(...sliderAnimations);
+  sliders[current].classList.remove(...sliderAnimations, "invisible");
   sliders[next].classList.remove(...sliderAnimations);
-  classToggle(sliders[current], ["hidden", "slideFromNext"]);
-  classToggle(sliders[next], ["hidden", "slideToNext"]);
+  classToggle(sliders[current], ["slideFromNext"]);
+  classToggle(sliders[next], ["slideToNext"]);
 };
 const prevSlide = (current, next) => {
-  sliders[current].classList.remove(...sliderAnimations);
+  sliders[current].classList.remove(...sliderAnimations, "invisible");
   sliders[next].classList.remove(...sliderAnimations);
-  classToggle(sliders[current], ["hidden", "slideFromPrev"]);
-  classToggle(sliders[next], ["hidden", "slideToPrev"]);
+  classToggle(sliders[current], ["slideFromPrev"]);
+  classToggle(sliders[next], ["slideToPrev"]);
 };
 
 sliderBtn.addEventListener("click", (e) => {

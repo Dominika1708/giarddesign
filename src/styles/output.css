@@ -538,6 +538,10 @@ video {
   pointer-events: none;
 }
 
+.invisible {
+  visibility: hidden;
+}
+
 .fixed {
   position: fixed;
 }
@@ -1040,10 +1044,6 @@ video {
   border-width: 1px;
 }
 
-.border-2 {
-  border-width: 2px;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
@@ -1104,10 +1104,6 @@ video {
 
 .bg-opacity-40 {
   --tw-bg-opacity: 0.4;
-}
-
-.bg-opacity-50 {
-  --tw-bg-opacity: 0.5;
 }
 
 .bg-opacity-60 {
@@ -1443,68 +1439,80 @@ video {
 .slideToNext {
   animation-name: slideToNext;
   animation-duration: 1.5s;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+  visibility:visible;
 }
 
 .slideFromNext {
   animation-name: slideFromNext;
   animation-duration: 1.5s;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+  visibility: hidden;
 }
 
 .slideToPrev {
   animation-name: slideToPrev;
   animation-duration: 1.5s;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+  visibility:visible;
 }
 
 .slideFromPrev {
   animation-name: slideFromPrev;
   animation-duration: 1.5s;
+  transition-property: visibility;
+  transition-delay: 1.5s;
+  visibility: hidden;
 }
 
 @keyframes slideToNext {
   from {
     transform: translateX(100%);
-    display: none;
+    visibility: hidden;
   }
 
   to {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 }
 
 @keyframes slideFromNext {
   from {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 
   to {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
 }
 
 @keyframes slideToPrev {
   from {
     transform: translateX(-100%);
-    display: none;
+    visibility: hidden;
   }
 
   to {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 }
 
 @keyframes slideFromPrev {
   from {
     transform: translateX(0);
-    display: flex;
+    visibility:visible;
   }
 
   to {
     transform: translateX(100%);
-    display: none;
+    visibility: hidden;
   }
 }
 
