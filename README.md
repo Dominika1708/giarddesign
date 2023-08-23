@@ -2,7 +2,7 @@
 
 Welcome to the repository for a captivating landing page built using HTML, styled with Tailwind CSS, and enhanced with JavaScript functionality.
 
-[live preview](https://dominika1708.github.io/giarddesign/)
+[live preview](https://dominika1708.github.io/giarddesign/){:target="_blank"}
 
 ## Features
 * Modern and responsive design.
